@@ -32,7 +32,7 @@
       <tr>
         <td><%= customer.name %></td>
         <td><%= customer.email %></td>
-        <td><%= customer.birthday %></td>
+        <td><%= l(customer.birthday) %></td> <%# uso do Locale para data pt-BT %>
         <td><%= customer.obg %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
@@ -45,3 +45,9 @@
 <br>
 
 <%= link_to 'New Customer', new_customer_path %>
+
+
+<%# 
+        t # traduzir textos 
+        l # localizar data/hora
+    %>
